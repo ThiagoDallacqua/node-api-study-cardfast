@@ -46,8 +46,8 @@ module.exports = function(app) {
       dados_do_cartao: cartao
     }
 
-    logger.info(`Pagamento autorizado ${response}`)
-    console.log(`Pagamento autorizado ${response}`);
+    logger.info(`Pagamento autorizado ${JSON.stringify(response)}`)
+    console.log(`Pagamento autorizado ${JSON.stringify(response)}`);
 
     res.status(201).json(response);
     return;
