@@ -41,13 +41,13 @@ module.exports = function(app) {
     }
 
     cartao.status = 'AUTORIZADO';
-    console.log("Pagamento Autorizado");
 
     var response = {
       dados_do_cartao: cartao
     }
 
     logger.info(`Pagamento autorizado ${response}`)
+    console.log(`Pagamento autorizado ${response}`);
 
     res.status(201).json(response);
     return;
